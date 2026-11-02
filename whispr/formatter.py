@@ -29,8 +29,8 @@ _FILLER_RE = re.compile(
     r"(?i)(?<![\w'])(?:u+m+|u+h+|erm+|er|a+h+|h+m+|mhm+)(?![\w'])"
 )
 
-_NEW_PARAGRAPH_RE = re.compile(r"(?i)[ \t]*[,.!?]?[ \t]*\bnew\s+paragraph\b[,.!?]?[ \t]*")
-_NEW_LINE_RE = re.compile(r"(?i)[ \t]*[,.!?]?[ \t]*\bnew\s+line\b[,.!?]?[ \t]*")
+_NEW_PARAGRAPH_RE = re.compile(r"(?i)[ \t]*[,.!?]?[ \t]*\b(?:new\s+paragraph|nuevo\s+párrafo|nuevo\s+parrafo|salto\s+de\s+párrafo|salto\s+de\s+parrafo)\b[,.!?]?[ \t]*")
+_NEW_LINE_RE = re.compile(r"(?i)[ \t]*[,.!?]?[ \t]*\b(?:new\s+line|salto\s+de\s+línea|salto\s+de\s+linea|nueva\s+línea|nueva\s+linea)\b[,.!?]?[ \t]*")
 
 
 def _word_re(term: str) -> re.Pattern:
